@@ -37,15 +37,21 @@
     <div class="row">
         <div class="col-10 mt-3">
             <div class="d-flex flex-column gap-3">
-                <form class="col-5">
+                <form class="was-validated col-5">
                     <div class="mb-3">
                         <label for="InputEmail" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="InputEmail" maxlength="35"
-                               aria-describedby="email">
+                               aria-describedby="email" required>
+                        <div class="invalid-feedback">
+                            Please enter an email.
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="InputPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="InputPassword" maxlength="35">
+                        <input type="password" class="form-control" id="InputPassword" maxlength="35" required>
+                        <div class="invalid-feedback">
+                            Please enter a password.
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-secondary">Submit</button>
                 </form>

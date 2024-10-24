@@ -21,7 +21,7 @@
                 <button class="btn btn-outline-success" type="submit">Ask!</button>
             </form>
             <div class="d-flex gap-2">
-                <img src="" alt="Avatar" class="img-thumbnail" style="width: 50px; height: 50px;">
+                <img src="static/img/cat_pfp.jpg" alt="Avatar" class="img-thumbnail" style="width: 50px; height: 50px;">
                 <div>
                     <div>
                         Dr.Pepper
@@ -46,22 +46,31 @@
     <div class="row">
         <div class="col-10 mt-3">
             <div class="d-flex flex-column gap-3">
-                <form class="col-5">
+                <form class="was-validated col-5">
                     <div class="mb-3">
                         <label for="InputTitle" class="form-label">Title</label>
                         <input type="text" class="form-control" id="InputTitle" maxlength="35"
-                               aria-describedby="title">
+                               aria-describedby="title" required>
+                        <div class="invalid-feedback">
+                            Please enter a title.
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="QuestionTextarea" class="form-label">Text</label>
-                        <textarea class="form-control" id="QuestionTextarea" rows="7" maxlength="300" style="max-height: 500px;"></textarea>
+                        <textarea class="form-control" id="QuestionTextarea" rows="7" maxlength="300" style="max-height: 500px;" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter your question.
+                        </div>
                     </div>
 
                     <div class="mb-3">
                         <label for="InputTags" class="form-label">Tags</label>
                         <input type="text" class="form-control" id="InputTags" maxlength="35"
-                               aria-describedby="tags">
+                               aria-describedby="tags" required>
+                        <div class="invalid-feedback">
+                            Please provide tags. 
+                        </div>
                     </div>
 
                     <button type="submit" class="btn btn-secondary">Ask!</button>
